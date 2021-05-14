@@ -11,7 +11,12 @@ function! fmt#format#format() abort
     return
   endif
 
-  let fmt_command           = split(s:fmt_commands_local[current_filetype])
+  let fmt_command = split(s:fmt_commands_local[current_filetype])
+  if !executable(fmt_command[0])
+    echoerr "Command " . fmt_command[0] . " is not found!"
+    return
+  endif
+
   let fmt_command_with_path = add(l:fmt_command, expand('%'))
 
   call job_start(l:fmt_command_with_path)
