@@ -17,7 +17,6 @@ function! fmt#format#format() abort
   let current_filetype = &filetype
 
   if !has_key(s:fmt_commands_local, l:current_filetype)
-    echoerr "Filetype " . current_filetype . " is not set!"
     return
   endif
 
