@@ -6,7 +6,7 @@
   Generic code formatting interface for Vim
 </div>
 
-### Installation
+## Installation
 
 Install `aonemd/fmt.vim` using a plugin manger such as:
 [vim-plug](https://github.com/junegunn/vim-plug),
@@ -14,7 +14,7 @@ Install `aonemd/fmt.vim` using a plugin manger such as:
 [Vundle](https://github.com/gmarik/Vundle.vim), or
 [Pathogen](https://github.com/tpope/vim-pathogen).
 
-### Usage
+## Usage
 
 The plugin provides the command: `Fmt` that delegates the auto-formatting to a
 formatter. Currently, these formatters are used:
@@ -39,6 +39,6 @@ In order to use auto-formatting on buffer saving, you can add the following to
 autocmd! BufWrite * Fmt
 ```
 
-### License
+## License
 
 See [LICENSE](https://github.com/aonemd/fmt.vim/blob/master/LICENSE).
