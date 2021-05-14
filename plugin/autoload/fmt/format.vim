@@ -8,6 +8,11 @@ let s:fmt_commands_local = {
       \ 'ruby': 'rufo',
       \ }
 
+let g:fmt_commands = get(g:, 'fmt_commands', {})
+for i in keys(g:fmt_commands)
+  let s:fmt_commands_local[i] = g:fmt_commands[i]
+endfor
+
 function! fmt#format#format() abort
   let current_filetype = &filetype
 
