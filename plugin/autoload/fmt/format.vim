@@ -1,6 +1,11 @@
 let s:fmt_commands_local = {
       \ 'rust': 'rustfmt',
       \ 'go': 'gofmt -w',
+      \ 'c': 'clang-format -i -style=google',
+      \ 'cpp': 'clang-format -i -style=google',
+      \ 'javascript': 'prettier --write',
+      \ 'typescript': 'prettier --write',
+      \ 'ruby': 'rufo',
       \ }
 
 function! fmt#format#format() abort
