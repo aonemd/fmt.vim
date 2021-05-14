@@ -2,6 +2,8 @@
   <h1>
     fmt.vim
   </h1>
+
+  Generic code formatting interface for Vim
 </div>
 
 ### Installation
