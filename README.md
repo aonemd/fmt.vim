@@ -30,7 +30,19 @@ formatter. Currently, these formatters are used:
 | Ruby          | [rufo](https://github.com/ruby-formatter/rufo)      |    `rufo`         |
 
 User-defined commands can be used through the global variable `g:fmt_commands`
-which overwrites the default commands above.
+which overwrites the default commands above. `g:fmt_commands` example:
+
+```viml
+let g:fmt_commands = {
+      \ 'rust': 'rustfmt',
+      \ 'go': 'gofmt -w',
+      \ 'c': 'clang-format -i -style=google',
+      \ 'cpp': 'clang-format -i -style=google',
+      \ 'javascript': 'prettier --write',
+      \ 'typescript': 'prettier --write',
+      \ 'ruby': 'rufo',
+      \ }
+```
 
 In order to use auto-formatting on buffer saving, you can add the following to
 `~/.vimrc`:
